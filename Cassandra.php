@@ -125,7 +125,7 @@ class Zend_Cassandra
 		
 		$mutation[$columnFamily] = $columns;
 		
-		$this->client->batch_insert($this->keyspace, $key, $mutation, $consistency);
+		$this->_client->batch_insert($this->_keyspace, $key, $mutation, $consistency);
 	}
 	
 	/**
